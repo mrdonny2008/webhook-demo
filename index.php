@@ -1,6 +1,6 @@
 <?php
 
-$method = $_SERVER('REQUEST_METHOD');
+$method = $_SERVER['REQUEST_METHOD'];
 
 //Prosess only when methode is POST 
 if($method == 'POST'){
@@ -18,7 +18,7 @@ if($method == 'POST'){
             $speech = "Bye, good night";
             break;
         
-        case 'anything'
+        case 'anything':
             $speech = "Yes, you can type anything here";
             break;    
         
@@ -31,7 +31,7 @@ if($method == 'POST'){
     $response->speech ="";
     $response->displayText ="";
     $response->source ="webhook";
-    echo json_encode($response) 
+    echo json_encode($response);
 }
 else
 {
